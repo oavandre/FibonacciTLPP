@@ -1,0 +1,30 @@
+//--------------------------------------------------------------------
+/*/{Protheus.doc} fibonacci
+
+@author Osmar Andre
+@since  29/09/2020
+@obs    Serie de Fibonacci
+@version 1.0
+/*/
+//--------------------------------------------------------------------
+User Function fibonacci()
+
+Local nvar01 := 1
+Local nvar02 := 1
+Local nSoma	 := 0
+Local ni 	 := 0
+Local sSerie := '1'
+
+For ni := 1 to 9
+
+sSerie	:= sSerie + ', ' +cValToChar(nvar02)
+	
+nSoma  	:= nvar01 + nvar02
+nvar01 	:= nvar02
+nvar02	:= nSoma
+
+Next ni
+
+MSGALERT( sSerie, 'Fibonacci' )
+
+Return ()
